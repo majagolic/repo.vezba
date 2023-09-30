@@ -3,6 +3,258 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  color: #f0f6fc;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #161b22;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1em 0.1em;
+  height: 15vh;
+  overflow: hidden;
+}
+header nav {
+  width: 40%;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  list-style-type: none;
+  color: #f0f6fc;
+  text-decoration: none;
+  margin-right: 20px;
+}
+header nav ul li:hover {
+  background-color: #f0f6fc;
+  color: #010409;
+}
+header .imgCont {
+  background-color: #f0f6fc;
+  width: 5%;
+  height: 70%;
+  border-radius: 10px;
+}
+header .imgCont img {
+  width: 100%;
+  height: 100%;
+}
+header .search {
+  height: 40%;
+  width: 20%;
+  border: 1px solid #8b949e;
+  border-radius: 15px;
+}
+header .search form {
+  width: 100%;
+  height: 100%;
+}
+header .search form input {
+  width: 100%;
+  height: 100%;
+  background-color: #010409;
+  border: 1px solid #8b949e;
+  border-radius: 5px;
+}
+header .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .icons img {
+  width: 60px;
+  height: 60px;
+}
+
+main {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #010409;
+}
+main .jedan {
+  width: 20%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #0d1117;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+main .jedan .person {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #8b949e;
+  padding-bottom: 5px;
+}
+main .jedan .person .repo {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .jedan .person .repo img {
+  height: 30px;
+}
+main .jedan .forma {
+  height: 25px;
+  margin-bottom: 10px;
+}
+main .jedan .forma form {
+  border: 0.5px solid #8b949e;
+  border-radius: 5px;
+  height: 100%;
+}
+main .jedan .forma form input {
+  background-color: #0d1117;
+  color: #8b949e;
+  border: none;
+  padding-left: 5px;
+}
+main .jedan .username {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  align-items: baseline;
+  border-bottom: 1px solid #8b949e;
+  align-items: center;
+  padding-bottom: 5px;
+}
+main .jedan .username img {
+  width: 30px;
+  margin-right: 10px;
+}
+main .jedan .pib {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  align-items: center;
+}
+main .jedan .pib button {
+  width: 50px;
+  background-color: #238636;
+  padding: 5px;
+  border: #38914b 0.5px solid;
+  border-radius: 5px;
+}
+main .jedan .pib p {
+  margin-right: 50px;
+}
+main .jedan .recent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main .jedan .recent p {
+  margin-bottom: 10px;
+}
+main .jedan .recent .change {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .jedan .recent .change img {
+  height: 30px;
+}
+main .dva {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+main .dva .box {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: #8b949e solid 1px;
+  padding: 1%;
+  background-color: #0d1117;
+  transition: transform 1s;
+}
+main .dva .box img {
+  width: 150px;
+  height: 200px;
+  margin-right: 20px;
+  transition: transform 2s;
+}
+main .dva .box img:hover {
+  transform: scale(1.3) rotateX(360deg);
+}
+main .dva .box .tekst {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main .tri {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+main .tri h2 {
+  margin-bottom: 10px;
+}
+main .tri .smth p {
+  margin-bottom: 10px;
+  color: #8b949e;
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    width: 100%;
+  }
+  main .tri {
+    display: none;
+  }
+  main .jedan {
+    width: 30%;
+  }
+  main .dva {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    height: auto;
+  }
+  main .jedan {
+    width: 90%;
+  }
+  main .dva {
+    width: 100%;
+  }
+  main .dva .box {
+    width: 97%;
+  }
+  header .search {
+    display: none;
+  }
+  header nav {
+    display: none;
+  }
+  header .imgCont {
+    width: 50px;
+  }
+  header .icons .bell {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
